@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "X Image Viewer",
+  "version": "2.9.0",
+  "description": "Better full-screen image viewer on X: click-to-navigate, in-place zoom, region copy, copy and download.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["nav.js", "zoom.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
